@@ -4,6 +4,9 @@ import logoImg from './assets/logo.png';
 import sfxJoin from "./assets/playerjoin.mp3";
 import sfxPush from "./assets/push.mp3";
 
+/**
+ * This is an example game scene that uses CommonGameScene to create a (local) multiplayer game.
+ */
 class MyGame extends CommonGameScene {
   constructor() {
     super();

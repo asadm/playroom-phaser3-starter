@@ -6,6 +6,4 @@ const config = {
   scene: MyGame
 };
 
-console.log(config)
-
 export default config;

@@ -1,7 +1,6 @@
 import Phaser from "phaser";
 import Multiplayer from "./multiplayer";
 
-
 export default class CommonGameScene extends Phaser.Scene {
   constructor() {
     super({
@@ -16,9 +15,6 @@ export default class CommonGameScene extends Phaser.Scene {
   }
 
   async handlePlayerJoin(playerState) {
-    console.log("new player", playerState.id);
-
-    // place just the state until sprite is ready. so update doesnt call this method again for this player.
     this.players[playerState.id] = { state: playerState };
     let sprite = await this.addPlayerSprite(
       playerState,

@@ -45,50 +45,7 @@ class Multiplayer extends SuperEventEmitter {
       }
     });
   }
-  /*
-    listenToEvents() {
-      // forward some events
-      this.connection.on("joined", (player) => {
-        this.emit("joined", player);
-      });
-      this.connection.on("state", (state, key) => {
-        this.emit("state", state, key);
-      });
-      this.connection.on("connected", () => {
-        this.isConnected = true;
-        this.emit("connected");
-        if (this.isHost) this.emit("room_created", { id: this.currentRoom });
-        // URLHash.setUrlHashParameters({room: this.currentRoom, host: this.isHost});
-      });
   
-      this.connection.on("reconnecting", () => {
-        this.emit("reconnecting");
-      });
-  
-      this.connection.on("permission_error", () => {
-        if (this.isHost) {
-          // probably the room id is owned by someone else. Create another with new id
-          this.createRoom();
-        } else {
-          this.isConnected = false;
-          this.emit("permission_error");
-        }
-      });
-      this.connection.on("host_left", () => {
-        this.isConnected = false;
-        this.emit("host_left");
-      });
-  
-      this.connection.on("disconnected", () => {
-        this.isConnected = false;
-        this.emit("disconnected");
-      });
-  
-      this.connection.on("players", (players) => {
-        this.emit("players", players);
-      });
-    }
-  */
   on(eventName, handler) {
     if (eventName === "joined" && this.connection) {
       Object.keys(this.connection.playerStates).forEach((key) => {
