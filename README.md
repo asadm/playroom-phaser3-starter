@@ -2,6 +2,10 @@
 
 A template for creating a Phaser 3 Playroom game.
 
+This template provides a development environment and mock APIs for multiplayer parts that you can use to test your Phaser game locally without embedding the entire Playroom codebase.
+
+The game is under `src/` which uses the helper code from `runner/` to start Phaser game and use keyboard inputs to simulate multiplayer controls.
+
 ## Available Commands
 
 | Command | Description |
