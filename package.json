@@ -25,6 +25,6 @@
   "dependencies": {
     "@babel/runtime": "^7.18.3",
     "mousetrap": "git+https://github.com/ccampbell/mousetrap.git",
-    "phaser": "^3.50.0"
+    "phaser": "^3.55.2"
   }
 }
